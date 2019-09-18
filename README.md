@@ -7,16 +7,14 @@
 - 管理员端：对违规用户解禁、处罚、设置开放楼层、开放座位等
 
 ## 设计思路
-- [幕布思维导图]
-(https://mubu.com/doc/tGA0g_KG90)
+- [思维导图](https://mubu.com/doc/hYr5gwu6r0)
 
 ## 其它说明
 此项目只完成部分功能
 
 ## 参考文档
 
-- [微信小程序开发文档]
-(https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [微信小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 
 - [微信小程序云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
