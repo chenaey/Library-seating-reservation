@@ -1,0 +1,8 @@
+page {
+  background-color: #fefdf9;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}

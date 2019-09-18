@@ -1,0 +1,59 @@
+ <!--个人信息栏目-->
+<view class='top-img'>
+  <image class='img-one' mode='widthFix' src='/images/index.png'>
+  </image>
+</view>
+
+
+<view class="top">
+  <block wx:if='{{authData}}'>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{authData.userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="col">
+        <text class="userinfo-nickname">{{authData.userName}}</text>
+        <text class="tip">已认证</text>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if='{{!authData}}'>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="/images/tsg.jpg"></image>
+      <view class="col">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class="tip12" bindtap="toLogin">未认证</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<view class="punch-card" bindtap="bindPunchCard">
+  <view class="punch-row">
+    <image class="saoyisao" src="/images/icon/saoyisao.png"></image>
+    <view class="punch-card-text">扫码签到</view>
+    <view class="punch-arrow"></view>
+
+  </view>
+</view>
+<view wx:for='{{menus}}' wx:key="{{index}}" class='operator' bindtap='bindNavigator' data-id="{{item.id}}">
+  <view class="row">
+    <view>
+      <view class='main-text'>{{item.name}}</view>
+      <view class='little-text'>{{item.tip}}</view>
+    </view>
+    <view class="right">
+      <image class="left-img" src="{{item.img}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="weui-msg__extra-area" style="margin-top:40rpx;">
+  <view class="weui-footer">
+    <view class="weui-footer__links">
+      <view class="weui-footer__link">仲恺图书馆</view>
+      <!-- <navigator url="lib.zhku.cn" class="weui-footer__link">仲恺图书馆</navigator> -->
+    </view>
+    <view class="weui-footer__text">Copyright © 1927-2019 zhku.edu.cn</view>
+  </view>
+</view>

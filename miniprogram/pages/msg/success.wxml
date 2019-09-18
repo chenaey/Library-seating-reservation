@@ -1,0 +1,33 @@
+<view class="page">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area">
+      <icon type="success" size="64"></icon>
+    </view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">{{msg.title}}</view>
+      <view class="weui-msg__desc">{{msg.tip1}} </view>
+      <view class="weui-msg__desc">{{msg.tip2}}</view>
+      <!-- <navigator url="" class="weui-msg__link">查看</navigator> -->
+    </view>
+    <view class="weui-msg__opr-area">
+      <view class="weui-btn-area">
+        <button class="weui-btn" bindtap="goHme" style="background-color:#08c161;color:#fff;">{{msg.operatorText}}</button>
+      </view>
+    </view>
+    <view class="weui-msg__tips-area">
+      <view class="weui-msg__tips">
+        {{msg.tip_bottom}}
+        <!-- <navigator url="" class="weui-msg__link">文字链接</navigator> -->
+      </view>
+    </view>
+    <view class="weui-msg__extra-area">
+      <view class="weui-footer">
+        <view class="weui-footer__links">
+          <view class="weui-footer__link">仲恺图书馆</view>
+          <!-- <navigator url="lib.zhku.cn" class="weui-footer__link">仲恺图书馆</navigator> -->
+        </view>
+        <view class="weui-footer__text">Copyright © 1927-2019 zhku.edu.cn</view>
+      </view>
+    </view>
+  </view>
+</view>

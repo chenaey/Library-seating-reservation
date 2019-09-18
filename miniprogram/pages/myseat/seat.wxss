@@ -1,0 +1,456 @@
+page {
+  background: #eee;
+}
+
+
+.movable-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.movieName {
+  font-size: 35rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+/**/
+
+.movableOne {
+  box-sizing: border-box;
+  color: #fff;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  transform: rotate(180deg);
+}
+
+
+.hallName {
+  padding: 8rpx 10rpx 8rpx 8rpx;
+  font-size: 32rpx;
+  /* border-top: 40rpx solid #999;
+  border-top: 20rpx solid transparent;
+  border-left: 20rpx solid transparent; */
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: #999;
+  color: white;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  right: 90rpx;
+  top: 40rpx;
+}
+
+/**/
+
+.seatArea {
+  margin: 0 auto;
+  font-size: 10rpx;
+  position: absolute;
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.seatAreaL {
+  position: fixed;
+  margin: 0 auto;
+}
+
+.seatAreaL-left {
+  position: absolute;
+  left: 150rpx;
+}
+
+.seatAreaL-right {
+  position: absolute;
+  right: 350rpx;
+}
+
+.seatAreaL-center {
+  position: absolute;
+  width: 200rpx;
+  height: 600rpx;
+  background-color: #999;
+  color: #fff;
+  font-size: 66rpx;
+  left: 254rpx;
+  text-align: center;
+}
+
+.center-text {
+  padding-top: 60rpx;
+}
+
+.planDetail {
+  color: #aaa;
+  font-size: 27rpx;
+}
+
+.info {
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding: 30rpx 30rpx;
+  position: relative;
+}
+
+.seatDemosBack {
+  background: #fff;
+}
+
+/*
+*座位样式的父级
+*/
+
+.seatDemos {
+  color: #aaa;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 25rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seatDemo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.areaSeatDemos {
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 100rpx;
+}
+
+.seatDemosScroll {
+  color: #aaa;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 25rpx;
+  white-space: nowrap;
+}
+
+.seatDemosScrollItem {
+  height: 90rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 15px;
+  display: inline-block;
+  align-items: center;
+  margin-top: 25rpx;
+}
+
+.seatDemosScrollItem.Itemnormal image {
+  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: -30%;
+}
+
+.seatDemo image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+/*
+*普通座位的图片样式
+*/
+
+.seatDemoItem {
+  white-space: nowrap;
+  width: 45rpx;
+  display: block;
+}
+
+/*
+*所有座位的区域
+*/
+
+.seatLeft {
+  position: absolute;
+  width: 50%;
+}
+
+.seatRiht {
+  position: absolute;
+  left: 50px;
+  width: 50%;
+}
+
+.seatTap {
+  position: absolute;
+}
+
+.line {
+  z-index: 999;
+  height: 40px;
+  border-left: 2rpx dashed red;
+  transform: rotate(90deg);
+}
+
+.Linerow {
+  position: absolute;
+  left: 47.5%;
+  top: -40%;
+  height: 100%;
+  z-index: 999;
+  border-left: 1px dashed #000;
+  transform: rotate(90deg);
+}
+
+.alignLine {
+  position: absolute;
+  left: 47.5%;
+  height: 100%;
+  z-index: 999;
+  border-left: 1px dashed #000;
+  transform: translateX(-100%);
+}
+
+/*
+*选座区域普通座位的图片样式
+*/
+
+.ttt {
+  position: relative;
+  color: #000;
+  font-size: 43rpx;
+}
+
+.normal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+*选座区域情侣座位的图片样式
+*/
+
+.LoveSeat {
+  position: relative;
+  /* margin: 10rpx 0;  */
+  width: 70rpx;
+  height: 70rpx;
+}
+
+/*
+*所有座位的图片样式下方透明可点击区域
+*/
+
+/*
+*情侣座位的图片样式下方透明可点击区域
+*/
+
+.LoveSeatTap {
+  position: absolute;
+  top: 0;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+/*
+* 座位图限制区域
+*/
+
+movable-area {
+  background: #eee;
+  overflow: hidden;
+}
+
+.movableTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1400rpx;
+  width: 30rpx;
+  padding: 100rpx 0;
+  color: #fff;
+}
+
+/*
+* (左边座位排号栏整体)
+*/
+
+.seatTool {
+  width: 30rpx;
+  padding: 100rpx 0;
+  opacity: 0.5;
+}
+
+.seatToolArea {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50rpx;
+}
+
+/*
+* (左边座位排号栏每一个块)
+*/
+
+.seatTag {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*
+*页面最下方确认选座区域
+*/
+
+.orderComfirm {
+  background: #fff;
+  position: fixed;
+  display: flex;
+  bottom: 0rpx;
+  width: 100%;
+  line-height: 100rpx;
+  z-index: 3;
+}
+
+/*
+*页面最下方价格区域
+*/
+
+.orderPrice {
+  text-indent: 30rpx;
+  color: black;
+  height: 100rpx;
+  width: 60%;
+}
+
+/*
+*页面最下方价格字体样式
+*/
+
+.orderPrice text {
+  color: red;
+}
+
+/*
+*页面最下方确认选座区域渐变色
+*/
+
+.comfirm {
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background: linear-gradient(to right, #c26dfe, #6f50f5);
+  height: 100rpx;
+}
+
+/*
+*用户选中的座位区域
+*/
+
+.selectSeatInfo {
+  background: #fff;
+  position: fixed;
+  bottom: 100rpx;
+  height: 80rpx;
+  width: 100%;
+  padding-top: 10rpx;
+}
+
+.scrollSeat {
+  height: 80rpx;
+  white-space: nowrap;
+}
+
+/*
+*每块用户选中的座位详情
+*/
+
+.scrollItem {
+  border: 1rpx solid #bbb;
+  border-radius: 10rpx;
+  width: 200rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+/*
+* 快速选座模块
+*/
+
+.quickItem {
+  border: 1rpx solid #bbb;
+  color: #aaa;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  width: 160rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  display: inline-block;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+/*
+*每块用户选中的座位详情上方文字
+*/
+
+.scrollTextTop {
+  color: #555;
+  text-indent: 30rpx;
+  line-height: 25rpx;
+  font-size: 26rpx;
+  height: 46rpx;
+  margin-top: 10rpx;
+}
+
+/*
+*每块用户选中的座位详情下方文字
+*/
+
+.scrollTextBottom {
+  font-weight: 600;
+  font-size: 26rpx;
+  color: #ff005a;
+  text-indent: 40rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  margin: 10rpx 0;
+}
+
+/*
+*每块用户选中的座位详情关闭按钮
+*/
+
+.scrollItem image {
+  position: absolute;
+  z-index: 2;
+  width: 30rpx;
+  height: 30rpx;
+  right: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.seatAreaTip {
+  position: relative;
+  width: 750rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 16rpx;
+  color: rgba(0, 0, 0, 0.1);
+  border-top: 1rpx dashed rgba(0, 0, 0, 0.1);
+}

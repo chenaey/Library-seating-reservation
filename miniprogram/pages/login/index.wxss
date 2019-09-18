@@ -1,0 +1,227 @@
+page {
+  background: #ececec;
+}
+
+.logins {
+  background-color: #ececec;
+  margin-top: 50rpx;
+  padding-top: 20rpx;
+}
+
+.studentid {
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  background-color: #fff;
+  padding: 28rpx;
+  margin: 28rpx;
+  align-items: center;
+}
+
+.student-text {
+  padding-right: 28rpx;
+  color: rgb(124, 124, 124);
+  font-weight: 600;
+}
+
+.inputtext {
+  width: 500rpx;
+}
+
+/* .login-top {
+  border-radius: 4rpx;
+  padding-top: 4rpx;
+}
+
+.text {
+  display: flex;
+  padding-top: 26rpx;
+  padding-bottom: 26rpx;
+  font-size: 32rpx;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+} */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #fff;
+  padding-top: 52rpx;
+  padding-bottom: 64rpx;
+  margin-bottom: 14rpx;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100%;
+}
+
+.userinfo-nickname {
+  font-size: 30rpx;
+  padding-top: 24rpx;
+}
+
+.submitxxx {
+  margin-top: 54rpx;
+  color: #fff;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  background-color: #16b990;
+}
+
+.top {
+  background: #fff;
+  padding-left: 24rpx;
+  padding-bottom: 14rpx;
+  margin-bottom: 14rpx;
+}
+
+.top-text {
+  font-size: 34rpx;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 14rpx;
+}
+
+.top-text-1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  padding-top: 8rpx;
+  align-content: center;
+  padding-bottom: 6rpx;
+}
+
+.tips {
+  display: flex;
+  padding-top: 48rpx;
+  padding-bottom: 8rpxx;
+  flex-direction: column;
+  font-size: 24rpx;
+  align-content: center;
+  background-color: #fff;
+}
+
+.tips .ttt {
+  padding-left: 22rpx;
+  line-height: 48rpx;
+}
+
+/* 提示弹窗 */
+
+.myPrice-main {
+  position: fixed;
+  top: 240rpx;
+  padding-bottom: 8rpx;
+  padding-top: 4rpx;
+  right: 0;
+  background-color: #16b990;
+  width: 180rpx;
+  border-top-left-radius: 27rpx;
+  border-bottom-left-radius: 27rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+myPrice-main .myPrice {
+  position: fixed;
+  text-align: center;
+  z-index: 9;
+  top: 400rpx;
+}
+
+.prize-list-box {
+  width: 100vw;
+  z-index: 9999;
+  height: 500rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.shareBg {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 250rpx;
+  background: #fff;
+  position: fixed;
+  left: 40rpx;
+  bottom: 520rpx;
+  /* border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx; */
+  border-radius: 20rpx;
+  animation: rising 0.2s;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.des-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 0;
+}
+
+.left {
+  display: flex;
+  flex: 1;
+  font-size: 38rpx;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.right {
+  position: relative;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.prize-list-box .bottom .des-title .right::before,
+.prize-list-box .bottom .des-title .right::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background-color: #cdcdcd;
+}
+
+.prize-list-box .bottom .des-title .right::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.prize-list-box .bottom .des-title .right::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.prize-list-box .bottom .content {
+  max-height: 730rpx;
+  overflow-y: auto;
+}
+
+.prize-list-box .bottom .content .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #f3f3f3; */
+}

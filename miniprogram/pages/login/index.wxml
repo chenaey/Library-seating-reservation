@@ -1,0 +1,44 @@
+<view class="middle">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="/images/tsg.jpg" mode="cover"></image>
+    <text class="userinfo-nickname">仲恺图书馆</text>
+    <view class='myPrice-main'>
+      <view class="myPrice" bindtap="showPrize">认证说明</view>
+    </view>
+  </view>
+</view>
+
+<view class='logins'>
+  <form catchsubmit="formSubmit">
+    <view class='studentid'>
+      <view class='student-text'>学号 |</view>
+      <input name='username' class='inputtext' value='{{username}}' placeholder='请输入学号' type='number' maxlength='12'></input>
+    </view>
+    <view class='studentid'>
+      <view class='student-text'>密码 |</view>
+      <input name='password' class='inputtext' value='{{password}}' placeholder='请输入密码' password='true'></input>
+    </view>
+    <button wx:if="{{userInfo}}" formType="submit" class='submitxxx'>立即认证</button>
+    <button class='submitxxx' wx:if="{{!userInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" formType="submit"> 立即认证 </button>
+  </form>
+</view>
+
+<view class="prize-list-box" wx:if="{{prizeShow}}">
+  <view class="shareBg" bind:tap="closePrize"></view>
+  <view class="bottom">
+    <view class="des-title">
+      <view class="left">『认证说明』</view>
+      <view class="right" bind:tap="closePrize"></view>
+    </view>
+    <view class="item">
+      <view class='top'>
+        <view class='top-text-1'>1.账号密码为教务网账号密码</view>
+        <view class='top-text-1'>2.系统不会在任何地方存储您的账号密码</view>
+        <view class='top-text-1'>3.认证之后系统将从教务网获取您的实名信息</view>
+        <view class='top-text-1'>4.若认证错误,请联系管理员</view>
+        <view class='top-text-1'>5.认证完成后学号将与此微信号绑定</view>
+
+      </view>
+    </view>
+  </view>
+</view>

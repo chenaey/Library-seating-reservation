@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area">
+      <icon type="{{msg.type}}" size="64"></icon>
+    </view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">{{msg.text}}</view>
+      <view class="weui-msg__desc">{{msg.tip}}</view>
+    </view>
+
+    <view class="weui-msg__opr-area" wx:if='{{type==="1"}}'>
+      <view class="weui-btn-area">
+        <button class="weui-btn" style="color:#06ae56;" type="default" bindtap="goAgree">前往授权</button>
+      </view>
+    </view>
+
+    <view class="weui-msg__opr-area">
+      <view class="weui-btn-area">
+        <button class="weui-btn" style="color:#06ae56;" type="default" bindtap="goHome">{{msg.operator}}</button>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,154 @@
+page {
+  background-color: #fff;
+  font-family: "黑体", "Microsoft YaHei", "宋体", "Arial", sans-serif;
+}
+
+.top {
+  position: absolute;
+  top: 220rpx;
+  margin: 20rpx 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 40rpx;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.punch-card {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.punch-row {
+  display: flex;
+  flex-direction: row;
+  border: 2rpx solid #08c161;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 50rpx;
+  margin: 20rpx 0;
+  padding: 10rpx 36rpx;
+}
+
+.punch-arrow {
+  float: right;
+  content: " ";
+  height: 6px;
+  width: 6px;
+  border-width: 3rpx 3rpx 0 0;
+  border-color: #08c161;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+
+.punch-card-text {
+  color: #08c161;
+  font-size: 32rpx;
+  letter-spacing: 0.13em;
+}
+
+.saoyisao {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.tip12 {
+  background-color: red;
+  color: #fff;
+  font-size: 24rpx;
+  width: 100rpx;
+  text-align: center;
+  padding: 2rpx;
+  height: 40rpx;
+  margin-left: 16rpx;
+  margin-top: 6rpx;
+}
+
+.tip {
+  background-color: #08c161;
+  color: #fff;
+  font-size: 24rpx;
+  width: 100rpx;
+  text-align: center;
+  padding: 2rpx;
+  height: 40rpx;
+  margin-left: 16rpx;
+  margin-top: 6rpx;
+}
+
+.userinfo-avatar {
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 10rpx;
+}
+
+.userinfo-nickname {
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 8rpx;
+  padding-left: 16rpx;
+}
+
+.userinfo-text {
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+  padding-top: 16rpx;
+}
+
+.operator {
+  padding: 30rpx;
+  background: #fff;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  border: 2rpx dashed #909399;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text {
+  font-size: 36rpx;
+}
+
+.little-text {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex: 1;
+}
+
+.left-img {
+  width: 100rpx;
+  height: 100rpx;
+}

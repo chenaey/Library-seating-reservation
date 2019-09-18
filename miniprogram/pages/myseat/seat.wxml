@@ -1,0 +1,101 @@
+<view class='info'>
+  <view class='movieName'>{{movieName}}</view>
+  <view class='planDetail'>{{currentTime}}</view>
+</view>
+<!--座位示例图  -->
+<view class="seatDemosBack">
+  <view class="seatDemos">
+    <block wx:for="{{seatTypeList}}" wx:for-index="index" wx:for-item="seatTypeItem" wx:key="index">
+      <view class="seatDemo" wx:if="{{seatTypeItem.isShow==='1' && seatTypeItem.position==='up'}}">
+        <image class="seatDemoItem" mode="widthFix" src="{{seatTypeItem.icon}}"></image>
+        <view class="seatDemoItem"> {{seatTypeItem.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<movable-area scale-area="true" class="defaultArea" style="height:{{seatArea}}px; width: 750rpx;">
+  <movable-view bindscale="handleScale" class="movableOne" style="height:{{seatArea}}px; width: 750rpx;" scale="true" direction="all" scale-value='1' scale-max="2" scale-min="0.5" out-of-bounds="true">
+
+    <!-- <view class='Linerow'></view> -->
+
+    <!--中轴线  -->
+    <view class='alignLine'></view>
+
+    <!-- <view class='seatArea' style='width:{{seatScaleHeight * maxX}}px;height:{{seatScaleHeight * maxY}}px'>
+      <view wx:for="{{seatList}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item" class='seatTap' catchtap='clickSeat' data-type='R' data-index='{{index}}' style="left:{{(item.col-1+item.left)* seatScaleHeight}}px;top:{{(item.row-1+item.top) * seatScaleHeight}}px;width: {{seatScaleHeight}}px;height: {{seatScaleHeight}}px">
+        <image src="{{item.nowIcon}}" class='normal' />
+
+      </view>
+    </view> -->
+
+    <view class='hallName'>
+      <view>门</view>
+      <view>口</view>
+    </view>
+    <view class="seatAreaL" style='top:{{seatScaleHeight * maxY}}px;width:{{seatScaleHeight * maxX}}px;height:{{seatScaleHeight * maxY}}px'>
+
+      <view class='seatAreaL-left'>
+        <view>
+          <view wx:for="{{seatListL1}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item" class='seatTap' catchtap='clickSeat' data-type='L' data-index='{{index}}' style="left:{{(item.col-1)* seatScaleHeight}}px;top:{{(item.row-1) * seatScaleHeight}}px;width: {{seatScaleHeight}}px;height: {{seatScaleHeight}}px">
+            <image style="border-bottom: {{item.gCol%2===0?1:0}}px dashed #999;padding-left: 40rpx;" src="{{item.nowIcon}}" class='normal' />
+
+
+          </view>
+        </view>
+      </view>
+
+      <view class="seatAreaL-center">
+        <view class="center-text">藏</view>
+        <view class="center-text">书</view>
+        <view class="center-text">区</view>
+      </view>
+      <!-- <view class="left-nums">
+        <view class="num" wx:for='{{leftNum}}' wx:key="{{index}}">
+          <view class="num-text">{{item}}</view>
+        </view>
+      </view>
+      <view class="right-nums">
+        <view class="num" wx:for='{{rightNum}}' wx:key="{{index}}">
+          <view class="num-text">{{item}}</view>
+        </view>
+      </view> -->
+      <view class='seatAreaL-right'>
+        <view wx:for="{{seatListL2}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item" class='seatTap'>
+          <image catchtap='clickSeat' data-type='R' data-index='{{index}}' class='normal' style="left:{{(item.col-1+item.left)* seatScaleHeight}}px;top:{{(item.row-1+item.top) * seatScaleHeight}}px;width: {{seatScaleHeight}}px;height: {{seatScaleHeight}}px" src="{{item.nowIcon}}"
+          /> </view>
+      </view>
+      <!-- 
+style="border-bottom: {{item.gCol%2===0?1:0}}px dashed #999;padding-right: 40rpx;" -->
+    </view>
+
+  </movable-view>
+</movable-area>
+<!--座位示例图  -->
+<!-- 用户选中的座位详情 -->
+<view class='selectSeatInfo' hidden='{{hidden}}'>
+  <scroll-view class="scrollSeat" scroll-x style="width: 100%">
+    <!-- 普通座位 -->
+    <block wx:for="{{selectedSeat}}" wx:key="id" wx:for-item="selectedSeatItem">
+      <view class='scrollItem' bindtap='clickSeat' data-type="{{selectedSeatItem.location}}" data-index='{{selectedSeatItem.orgIndex}}'>
+        <!-- <view class='scrollTextTop' wx:if="{{selectedSeatItem.location==='R'}}">
+          R-{{selectedSeatItem.col}}排{{selectedSeatItem.row}}座
+          <image src='/images/close.png'></image>
+        </view> -->
+        <view class='scrollTextTop' wx:if="{{selectedSeatItem.location==='L'}}">
+          L-{{selectedSeatItem.row}}排{{selectedSeatItem.col}}座
+          <image src='/images/close.png'></image>
+        </view>
+        <view class='scrollTextTop' wx:if="{{selectedSeatItem.location==='R'}}">
+          R-{{selectedSeatItem.row}}排{{selectedSeatItem.col}}座
+          <image src='/images/close.png'></image>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class='orderComfirm' style="flex-direction:row;">
+  <view class='comfirm' bindtap='confirmHandle'>确认选座
+  </view>
+</view>

@@ -1,0 +1,54 @@
+@import 'style/weui.wxss';
+
+.top-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.img-one {
+  width: 96%;
+  border-radius: 10rpx;
+}
+
+.my-btn-area {
+  margin: 8px 16px 8px;
+}
+
+.my-btn-u {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  background-color: #dedede;
+  display: flex;
+  width: 100rpx;
+  letter-spacing: 0.2em;
+  font-size: 28rpx;
+  height: 60rpx;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.my-btn-s {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  background-color: #08c161;
+  display: flex;
+  color: #fff;
+  width: 100rpx;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 28rpx;
+  height: 60rpx;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.about {
+  position: absolute;
+  right: 80rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}

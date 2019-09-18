@@ -1,0 +1,130 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+  <view class="page__bd">
+    <view class="weui-cells__title">个人信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input value="{{authData.userName}}" class="weui-input" disabled />
+        </view>
+      </view>
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input value="{{authData.userId}}" class="weui-input" />
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class="weui-cells__title">预约详情</view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">预约校区</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindCampusChange" value="{{campusIndex}}" range="{{campus}}">
+              <view class="weui-select weui-select_in-select-after">{{campus[campusIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="weui-cells__title">学习时间</view>
+      <view class="floors">
+        <view wx:for="{{floors}}" wx:key="{{index}}">
+          <view class="{{item.isClick?'my-btn-s':'my-btn-u'}}" bindtap="clickFloor" data-id="{{index}}">{{item.name}}</view>
+        </view>
+      </view> -->
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">开始日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{selectDateStart}}" start="{{dateStart}}" end="{{dateEnd}}" bindchange="bindDateStartChange">
+            <view class="weui-input">{{selectDateStart}} {{currTime}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">结束日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{selectDateEnd}}" start="{{dateStart}}" end="{{dateEnd}}" bindchange="bindDateEndChange">
+            <view class="weui-input">{{selectDateEnd}} 22:00</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell" wx:if='{{needPunchTime>=0}}'>
+        <view class="weui-cell__hd">
+          <view class="weui-label">签到次数</view>
+        </view>
+        <view class="weui-cell__bd">
+          共{{yuyueDay}}天 需签到{{needPunchTime}}次
+        </view>
+      </view>
+
+      <!-- <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学习时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="floors">
+            <view wx:for="{{studyTimes}}" wx:key="{{index}}">
+              <view class="{{item.isClick?'my-btn-s':'my-btn-u'}}" bindtap="clickStudyTime" data-id="{{index}}">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </view> -->
+
+      <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">选择座位</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindSelectSeat" value="seat"  range-key='name' range="{{floors}}">
+              <view class="weui-select weui-select_in-select-after myseat">{{seat}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <!-- <view class="weui-cells__title">申请理由</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入申请理由" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/100</view>
+        </view>
+      </view>
+    </view> -->
+    <!-- <checkbox-group bindchange="bindAgreeChange">
+      <label class="weui-agree" for="weuiAgree">
+        <view class="weui-agree__text">
+          <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+          <view class="weui-agree__checkbox-icon">
+            <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+          </view>
+          阅读并同意
+          <navigator url="/pages/other/clause" class="weui-agree__link">《图书馆固定座位申请条款》</navigator>
+        </view>
+      </label>
+    </checkbox-group> -->
+    <view class="my-btn-area">
+      <button class="weui-btn" style="background-color:#08c161;color:#fff;" bindtap="bindMakeOrder">立即预约</button>
+    </view>
+  </view>
+</view>
